@@ -1,6 +1,4 @@
-072de6712f93f8daa3a554feff7b379754ee4d6d
-Create README.md
-'Dymes'
-145899766
-DymNomZ
-'Mon Sep 16 19:20:49 2024 +0800'
+ae1222683b1d07be634314e7b62bf81b82b14007
+Added functions to get information
+'DymNomZ'
+Mon Sep 16 21:00:23 2024 

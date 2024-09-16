@@ -7,23 +7,19 @@
 using namespace std;
 
 int main() {
-    string hash, message, name, username, id, date;
+    string hash, message, username, date;
 
     get_details(hash, 1);
     get_details(message, 2);
-    get_details(name, 3);
-    get_details(username, 4);
-    get_details(id, 5);
-    get_details(date, 6);
+    get_details(username, 3);
+    get_details(date, 4);
 
     ofstream outputFile("store.txt");
 
     if (outputFile.is_open()) {
         outputFile << hash << endl;
         outputFile << message << endl;
-        outputFile << name << endl;
         outputFile << username << endl;
-        outputFile << id << endl;
         outputFile << date << endl;
         outputFile.close();
         cout << "Data written to output.txt successfully." << endl;

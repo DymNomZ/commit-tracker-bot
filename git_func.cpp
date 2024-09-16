@@ -24,14 +24,6 @@ void get_details(string& var, int type){
         break;
 
         case 4:
-        pipe = popen("git log -1 --pretty=format:'%ae'", "r");
-        break;
-
-        case 5:
-        pipe = popen("git log -1 --pretty=format:'%ae'", "r");
-        break;
-
-        case 6:
         pipe = popen("git log -1 --pretty=format:'%ad'", "r");
         break;
     }
