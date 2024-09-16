@@ -1,4 +1,4 @@
-ae1222683b1d07be634314e7b62bf81b82b14007
-Added functions to get information
+a505562337842f95eef36a5164bb227b241eaa94
+Removed %ae to get user id and username as it only works for verified commits
 'DymNomZ'
-Mon Sep 16 21:00:23 2024 
+Tue Sep 17 00:14:16 2024 
