@@ -11,10 +11,10 @@ int main() {
 
     get_details(hash, 1);
     get_details(message, 2);
-    get_details(username, 3);
+    get_details(username, 3); 
     get_details(date, 4);
 
-    ofstream outputFile("store.txt");
+    ofstream outputFile("C:\\Users\\User\\Desktop\\commit-tracker-bot\\MyBot\\store_info.txt");
 
     if (outputFile.is_open()) {
         outputFile << hash << endl;
@@ -22,23 +22,10 @@ int main() {
         outputFile << username << endl;
         outputFile << date << endl;
         outputFile.close();
-        cout << "Data written to output.txt successfully." << endl;
+        cout << "Data written to store_info.txt successfully. - via run_git_coms" << endl;
     } else {
-        cout << "Error opening file." << endl;
+        cout << "Error opening store_info file. - via run_git_coms" << endl;
     }
-
-    ifstream inputFile("store.txt");
-
-    if (inputFile.is_open()) {
-        string line;
-        while (getline(inputFile, line)) {
-            cout << line << endl;
-        }
-        inputFile.close();
-    } else {
-        cout << "Error opening file." << endl;
-    }
-
 
     return 0;
 }

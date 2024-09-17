@@ -47,12 +47,19 @@ void get_details(string& var, int type){
                     i++;
                 }
             }
+            if(type == 3){
+                int i = 1;
+                while(buffer[i] != '\''){
+                    var += buffer[i];
+                    i++;
+                }
+            }
             else{
                 if(type != 4) var += buffer;
             }
         pclose(pipe);
 
-        cout << var << endl;
+        cout << "+ " << var << endl;
     } else {
         cerr << "Error executing command." << endl;
     }
