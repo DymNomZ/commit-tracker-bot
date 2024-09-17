@@ -28,9 +28,12 @@ int main()
         system("C:\\Users\\User\\Desktop\\commit-tracker-bot\\MyBot\\run_git_coms.exe");
 
         //variables
-        string infos[6];
-        string current_hash;
+        string infos[4];
+        string current_hash, output;
         int idx = 0;
+
+        //cd back to bot folder -> Debug to be changed
+        std::filesystem::current_path("C:\\Users\\User\\Desktop\\commit-tracker-bot\\Debug\\");
 
         //get information
         std::ifstream inputFile("C:\\Users\\User\\Desktop\\commit-tracker-bot\\MyBot\\store_info.txt");
@@ -56,7 +59,20 @@ int main()
         else {
             std::cout << "Error getting hash from current_hash file." << std::endl;
         }
-        idx = 0;
+
+        //get files changed details
+        std::ifstream get_files_changed_details("C:\\Users\\User\\Desktop\\commit-tracker-bot\\MyBot\\files_changed.txt");
+        if (get_files_changed_details.is_open()) {
+            string line;
+            do{
+                output += line;
+                output += '\n';
+            }while (getline(get_files_changed_details, line));
+            get_files_changed_details.close();
+        }
+        else {
+            std::cout << "Error getting info from files_changed file." << std::endl;
+        }
 
         std::cout << current_hash << "---" << infos[0] << std::endl;
 
@@ -67,19 +83,21 @@ int main()
             string role_id;
             string name = infos[2];
 
+            cout << "Name: " << name << endl;
+
             //Big ass if-else cause switch won't accept strings
-            if (name.compare("DymNomz")) { github_id = "145899766"; discord_id = "279180492245565442"; role_id = "1148236835454210070";}
-            else if (name.compare("BladeLucas27")) { github_id = "115134677"; discord_id = "481296387745775626"; role_id = "1275694654075174965";}
-            else if (name.compare("BreakfasteMeat")) { github_id = "133184897"; discord_id = "691134401018593350"; role_id = "1210226098214936666";}
-            else if (name.compare("CursedSensei")) { github_id = "102786087"; discord_id = "413231303534837762"; role_id = "1148218807312207872";}
-            else if (name.compare("Fay-V")) { github_id = "178550114"; discord_id = "1147881270509060147"; role_id = "1210225987829239808";}
-            else if (name.compare("hnselcrck")) { github_id = "160475299"; discord_id = "812284993614512148"; role_id = "1210225434638159872";}
-            else if (name.compare("Icession")) { github_id = "167537767"; discord_id = "590844399039021058"; role_id = "1217084693091192853";}
-            else if (name.compare("jjsnippets")) { github_id = "144335180"; discord_id = "751779696160538625"; role_id = "1210226532015022101";}
-            else if (name.compare("lance-enario")) { github_id = "178461623"; discord_id = "598517212449472537"; role_id = "1217084878299070524";}
-            else if (name.compare("Pinghtdog")) { github_id = "178667768"; discord_id = "806957419958894642"; role_id = "1210225686044868669";}
-            else if (name.compare("siv727")) { github_id = "143003088"; discord_id = "735467108875632700"; role_id = "1217456469302186085";}
-            else if (name.compare("TopeMe")) { github_id = "102395021"; discord_id = "391003277111721985"; role_id = "1148218640282423358";}
+            if (name.compare("DymNomz") == 0) { github_id = "145899766"; discord_id = "279180492245565442"; role_id = "1148236835454210070";}
+            else if (name.compare("BladeLucas27") == 0) { github_id = "115134677"; discord_id = "481296387745775626"; role_id = "1275694654075174965";}
+            else if (name.compare("BreakfasteMeat") == 0) { github_id = "133184897"; discord_id = "691134401018593350"; role_id = "1210226098214936666";}
+            else if (name.compare("CursedSensei") == 0) { github_id = "102786087"; discord_id = "413231303534837762"; role_id = "1148218807312207872";}
+            else if (name.compare("Fay-V") == 0) { github_id = "178550114"; discord_id = "1147881270509060147"; role_id = "1210225987829239808";}
+            else if (name.compare("hnselcrck") == 0) { github_id = "160475299"; discord_id = "812284993614512148"; role_id = "1210225434638159872";}
+            else if (name.compare("Icession") == 0) { github_id = "167537767"; discord_id = "590844399039021058"; role_id = "1217084693091192853";}
+            else if (name.compare("jjsnippets") == 0) { github_id = "144335180"; discord_id = "751779696160538625"; role_id = "1210226532015022101";}
+            else if (name.compare("lance-enario") == 0) { github_id = "178461623"; discord_id = "598517212449472537"; role_id = "1217084878299070524";}
+            else if (name.compare("Pinghtdog") == 0) { github_id = "178667768"; discord_id = "806957419958894642"; role_id = "1210225686044868669";}
+            else if (name.compare("siv727") == 0) { github_id = "143003088"; discord_id = "735467108875632700"; role_id = "1217456469302186085";}
+            else if (name.compare("TopeMe") == 0) { github_id = "102395021"; discord_id = "391003277111721985"; role_id = "1148218640282423358";}
 
             std::cout << "git id: " << github_id << " discord id: " << discord_id << " role id: " << role_id << std::endl;
 
@@ -93,8 +111,10 @@ int main()
             string_view profile_URL = b_profile_URL;
             string_view username = infos[2];
             string_view commit_hash = b_commit_hash;
+            string_view files_changed = output;
 
             std::cout << avatar_URL << " " << commit_URL << " " << profile_URL << " " << username << " " << commit_hash << std::endl;
+            std::cout << output << std::endl;
 
             dpp::embed embed = dpp::embed()
                 .set_color(dpp::colors::medium_sea_green)
@@ -113,7 +133,7 @@ int main()
                 )
                 .add_field(
                     "Files changed:",
-                    "Removed Herobrine"
+                    files_changed
                 );
 
             string mention_role = "New commit by <@&" + role_id + ">";
@@ -121,7 +141,7 @@ int main()
             dpp::message msg1 = dpp::message::message(1285542405805703168, mention_role);
             dpp::message msg2 = dpp::message::message(1285542405805703168, "Make sure to pull first before pushing changes!");
             dpp::message commit_embed = dpp::message::message(1285542405805703168, embed);
-            //bot.co_message_create(mention);
+            bot.co_message_create(mention);
             Sleep(2000);
             bot.co_message_create(msg1);
             Sleep(2000);
@@ -130,7 +150,7 @@ int main()
             bot.co_message_create(commit_embed);
 
             //replace the current hash
-            ofstream update_current_hash("current_hash.txt");
+            ofstream update_current_hash("C:\\Users\\User\\Desktop\\commit-tracker-bot\\MyBot\\current_hash.txt");
             if (update_current_hash.is_open()) {
                 update_current_hash << infos[0] << endl;
                 update_current_hash.close();

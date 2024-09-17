@@ -1,4 +1,0 @@
-a505562337842f95eef36a5164bb227b241eaa94
-Removed %ae to get user id and username as it only works for verified commits
-'DymNomZ'
-Tue Sep 17 00:14:16 2024 

@@ -27,5 +27,20 @@ int main() {
         cout << "Error opening store_info file. - via run_git_coms" << endl;
     }
 
+    //write file changes stats to files_changed.txt
+    FILE* temp_file = tmpfile();
+    if (!temp_file) {
+        perror("tmpfile");
+        return 1;
+    }
+
+
+    int result = system("git show --stat --pretty=format:%s --format=\"\" > C:\\Users\\User\\Desktop\\commit-tracker-bot\\MyBot\\files_changed.txt");
+    if (result != 0) {
+        perror("git show");
+        fclose(temp_file);
+        return 1;
+    }
+
     return 0;
 }
