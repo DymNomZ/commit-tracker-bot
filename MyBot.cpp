@@ -76,7 +76,7 @@ int main()
 
         std::cout << current_hash << "---" << infos[0] << std::endl;
 
-        if(current_hash != infos[0]){
+        if(current_hash.compare(infos[0]) != 0) {
             //set IDs
             string github_id;
             string discord_id;
@@ -86,7 +86,7 @@ int main()
             cout << "Name: " << name << endl;
 
             //Big ass if-else cause switch won't accept strings
-            if (name.compare("DymNomz") == 0) { github_id = "145899766"; discord_id = "279180492245565442"; role_id = "1148236835454210070";}
+            if (name.compare("DymNomZ") == 0) { github_id = "145899766"; discord_id = "279180492245565442"; role_id = "1148236835454210070";}
             else if (name.compare("BladeLucas27") == 0) { github_id = "115134677"; discord_id = "481296387745775626"; role_id = "1275694654075174965";}
             else if (name.compare("BreakfasteMeat") == 0) { github_id = "133184897"; discord_id = "691134401018593350"; role_id = "1210226098214936666";}
             else if (name.compare("CursedSensei") == 0) { github_id = "102786087"; discord_id = "413231303534837762"; role_id = "1148218807312207872";}
@@ -161,6 +161,11 @@ int main()
 
         } else {
             std::cout << "No new commits!" << std::endl;
+            dpp::message no_commit_pm = dpp::message::message("No new commits!");
+            bot.direct_message_create(279180492245565442, no_commit_pm);
+            Sleep(2000);
+            bot.direct_message_create(781662446304886807, no_commit_pm);
+            std::cout << "Send private message to main and alt DymNomZs" << std::endl;
         }
         });
 
