@@ -5,13 +5,14 @@
 #include <string>
 #include <fstream>
 #include <filesystem>
+#include <Windows.h>
 
 using namespace std;
 using namespace dpp;
 
 const string BOT_TOKEN = "TOKEN HERE vv";
 
-int main()
+_Use_decl_annotations_ int WINAPI wWinMain(HINSTANCE hInst, HINSTANCE prevInst, PWSTR cmdLine, int cmdShow)
 {
     cluster bot(BOT_TOKEN);
 
