@@ -25,6 +25,10 @@ _Use_decl_annotations_ int WINAPI wWinMain(HINSTANCE hInst, HINSTANCE prevInst, 
         
         //cd to repo
         std::filesystem::current_path("C:\\Users\\User\\Desktop\\Java-2D-Game-Collab");
+        //pull....because there's no way to check latest commit without pulling
+        system("git pull");
+        //sleep cause idunno async yet in C++ heheh >:D
+        Sleep(8000);
         //run exe on bot folder
         system("C:\\Users\\User\\Desktop\\commit-tracker-bot\\MyBot\\run_git_coms.exe");
 
@@ -89,7 +93,8 @@ _Use_decl_annotations_ int WINAPI wWinMain(HINSTANCE hInst, HINSTANCE prevInst, 
             //Big ass if-else cause switch won't accept strings
             if (name.compare("DymNomZ") == 0) { github_id = "145899766"; discord_id = "279180492245565442"; role_id = "1148236835454210070";}
             else if (name.compare("BladeLucas27") == 0) { github_id = "115134677"; discord_id = "481296387745775626"; role_id = "1275694654075174965";}
-            else if (name.compare("BreakfasteMeat") == 0) { github_id = "133184897"; discord_id = "691134401018593350"; role_id = "1210226098214936666";}
+            else if (name.compare("Seth Nathaniel") == 0|| name.compare("BreakfasteMeat") == 0) { 
+                infos[2] = "BreakfasteMeat"; github_id = "133184897"; discord_id = "691134401018593350"; role_id = "1210226098214936666"; }
             else if (name.compare("CursedSensei") == 0) { github_id = "102786087"; discord_id = "413231303534837762"; role_id = "1148218807312207872";}
             else if (name.compare("Fay-V") == 0) { github_id = "178550114"; discord_id = "1147881270509060147"; role_id = "1210225987829239808";}
             else if (name.compare("hnselcrck") == 0) { github_id = "160475299"; discord_id = "812284993614512148"; role_id = "1210225434638159872";}
