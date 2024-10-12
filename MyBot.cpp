@@ -91,19 +91,79 @@ _Use_decl_annotations_ int WINAPI wWinMain(HINSTANCE hInst, HINSTANCE prevInst, 
             cout << "Name: " << name << endl;
 
             //Big ass if-else cause switch won't accept strings
-            if (name.compare("DymNomZ") == 0) { github_id = "145899766"; discord_id = "279180492245565442"; role_id = "1148236835454210070";}
-            else if (name.compare("BladeLucas27") == 0) { github_id = "115134677"; discord_id = "481296387745775626"; role_id = "1275694654075174965";}
-            else if (name.compare("Seth Nathaniel") == 0|| name.compare("BreakfasteMeat") == 0) { 
-                infos[2] = "BreakfasteMeat"; github_id = "133184897"; discord_id = "691134401018593350"; role_id = "1210226098214936666"; }
-            else if (name.compare("CursedSensei") == 0) { github_id = "102786087"; discord_id = "413231303534837762"; role_id = "1148218807312207872";}
-            else if (name.compare("Fay-V") == 0) { github_id = "178550114"; discord_id = "1147881270509060147"; role_id = "1210225987829239808";}
-            else if (name.compare("hnselcrck") == 0) { github_id = "160475299"; discord_id = "812284993614512148"; role_id = "1210225434638159872";}
-            else if (name.compare("Icession") == 0) { github_id = "167537767"; discord_id = "590844399039021058"; role_id = "1217084693091192853";}
-            else if (name.compare("jjsnippets") == 0) { github_id = "144335180"; discord_id = "751779696160538625"; role_id = "1210226532015022101";}
-            else if (name.compare("lance-enario") == 0) { github_id = "178461623"; discord_id = "598517212449472537"; role_id = "1217084878299070524";}
-            else if (name.compare("Pinghtdog") == 0) { github_id = "178667768"; discord_id = "806957419958894642"; role_id = "1210225686044868669";}
-            else if (name.compare("siv727") == 0) { github_id = "143003088"; discord_id = "735467108875632700"; role_id = "1217456469302186085";}
-            else if (name.compare("TopeMe") == 0) { github_id = "102395021"; discord_id = "391003277111721985"; role_id = "1148218640282423358";}
+            if (name.compare("DymNomZ") == 0 || name.compare("Dymes") == 0)
+            { 
+                github_id = "145899766"; 
+                discord_id = "279180492245565442"; 
+                role_id = "1148236835454210070";
+            }
+            else if (name.compare("BladeLucas") == 0 || name.compare("BladeLucas27") == 0)
+            { 
+                github_id = "115134677"; 
+                discord_id = "481296387745775626"; 
+                role_id = "1275694654075174965";
+            }
+            else if (name.compare("Seth Nathaniel") == 0 || name.compare("BreakfasteMeat") == 0) 
+            { 
+                infos[2] = "BreakfasteMeat"; 
+                github_id = "133184897"; 
+                discord_id = "691134401018593350"; 
+                role_id = "1210226098214936666"; 
+            }
+            else if (name.compare("CursedSensei") == 0) 
+            { 
+                github_id = "102786087"; 
+                discord_id = "413231303534837762"; 
+                role_id = "1148218807312207872";
+            }
+            else if (name.compare("Fay-V") == 0) 
+            { 
+                github_id = "178550114"; 
+                discord_id = "1147881270509060147"; 
+                role_id = "1210225987829239808";
+            }
+            else if (name.compare("hnselcrck") == 0) 
+            { 
+                github_id = "160475299"; 
+                discord_id = "812284993614512148"; 
+                role_id = "1210225434638159872";
+            }
+            else if (name.compare("Kurt") == 0 || name.compare("Icession") == 0)
+            { 
+                github_id = "167537767"; 
+                discord_id = "590844399039021058"; 
+                role_id = "1217084693091192853";
+            }
+            else if (name.compare("Joshua Sarcol") == 0 || name.compare("jjsnippets") == 0)
+            { 
+                github_id = "144335180"; 
+                discord_id = "751779696160538625"; 
+                role_id = "1210226532015022101";
+            }
+            else if (name.compare("lance-enario") == 0 || name.compare("lance.enario") == 0)
+            { 
+                github_id = "178461623"; 
+                discord_id = "598517212449472537"; 
+                role_id = "1217084878299070524";
+            }
+            else if (name.compare("Pinghtdog") == 0 || name.compare("Ping") == 0)
+            {
+                github_id = "178667768"; 
+                discord_id = "806957419958894642"; 
+                role_id = "1210225686044868669";
+            }
+            else if (name.compare("siv727") == 0 || name.compare("siv-a-siv") == 0)
+            { 
+                github_id = "143003088"; 
+                discord_id = "735467108875632700"; 
+                role_id = "1217456469302186085";
+            }
+            else if (name.compare("TopeMe") == 0 || name.compare("TopeQue") == 0)
+            { 
+                github_id = "102395021"; 
+                discord_id = "391003277111721985"; 
+                role_id = "1148218640282423358";
+            }
 
             std::cout << "git id: " << github_id << " discord id: " << discord_id << " role id: " << role_id << std::endl;
 
