@@ -97,8 +97,9 @@ _Use_decl_annotations_ int WINAPI wWinMain(HINSTANCE hInst, HINSTANCE prevInst, 
                 discord_id = "279180492245565442"; 
                 role_id = "1148236835454210070";
             }
-            else if (name.compare("BladeLucas") == 0 || name.compare("BladeLucas27") == 0)
+            else if (name.compare("BladeLucas") == 0 || name.compare("BladeLucas27") == 0 || name.compare("unknown") == 0)
             { 
+                infos[2] = "BladeLucas";
                 github_id = "115134677"; 
                 discord_id = "481296387745775626"; 
                 role_id = "1275694654075174965";
@@ -110,8 +111,9 @@ _Use_decl_annotations_ int WINAPI wWinMain(HINSTANCE hInst, HINSTANCE prevInst, 
                 discord_id = "691134401018593350"; 
                 role_id = "1210226098214936666"; 
             }
-            else if (name.compare("CursedSensei") == 0) 
+            else if (name.compare("CursedSensei") == 0 || name.compare("Zillion") == 0)
             { 
+                infos[2] = "CursedSensei";
                 github_id = "102786087"; 
                 discord_id = "413231303534837762"; 
                 role_id = "1148218807312207872";
