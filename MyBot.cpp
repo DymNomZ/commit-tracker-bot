@@ -24,7 +24,7 @@ _Use_decl_annotations_ int WINAPI wWinMain(HINSTANCE hInst, HINSTANCE prevInst, 
         //current_hash has an initial dummy string at the very first run of the program
         
         //cd to repo
-        std::filesystem::current_path("C:\\Users\\User\\Desktop\\Java-2D-Game-Collab");
+        std::filesystem::current_path("C:\\Users\\User\\Desktop\\j2dc");
         //pull....because there's no way to check latest commit without pulling
         system("git pull");
         //sleep cause idunno async yet in C++ heheh >:D
@@ -169,7 +169,7 @@ _Use_decl_annotations_ int WINAPI wWinMain(HINSTANCE hInst, HINSTANCE prevInst, 
 
             std::cout << "git id: " << github_id << " discord id: " << discord_id << " role id: " << role_id << std::endl;
 
-            string b_commit_URL = "https://github.com/DymNomZ/Java-2D-Game-Collab/commit/" + infos[0];
+            string b_commit_URL = "https://github.com/DymNomZ/j2dc/commit/" + infos[0];
             string b_profile_URL = "https://github.com/" + infos[2];
             string b_avatar_URL = "https://avatars.githubusercontent.com/u/" + github_id + "?v=4";
             string b_commit_hash = "Commit Hash: " + infos[0];
