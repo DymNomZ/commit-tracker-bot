@@ -104,7 +104,7 @@ _Use_decl_annotations_ int WINAPI wWinMain(HINSTANCE hInst, HINSTANCE prevInst, 
                 discord_id = "481296387745775626"; 
                 role_id = "1275694654075174965";
             }
-            else if (name.compare("Seth Nathaniel") == 0 || name.compare("BreakfasteMeat") == 0) 
+            else if (name.compare("Seth Nathaniel") == 0 || name.compare("BreakfasteMeat") == 0 || name.compare("PC-1") == 0) 
             { 
                 infos[2] = "BreakfasteMeat"; 
                 github_id = "133184897"; 
